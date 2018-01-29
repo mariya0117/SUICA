@@ -1,0 +1,65 @@
+﻿body
+{
+    width: 700px;
+    margin: auto;
+    
+    background-color: #b6fbff;
+    text-align: center;
+    font-family: Georgia;
+    color: #29323c;
+}
+
+h1
+{
+    font-size: 3em;
+    margin-bottom: 0;
+    text-shadow: 0 0 3px #83a4d4;
+}
+
+h2
+{
+    margin-top: 1em;
+    text-align: left;
+    margin-bottom: 0;
+    text-shadow: 0 0 1px #83a4d4;
+}
+
+p
+{
+    margin-top: 0.5em;
+    text-align: justify;
+    font-size: 1.1em;
+}
+
+canvas
+{
+    display: cnter;
+    margin: 0.5em auto 20px auto;
+    box-shadow: 0 0 25px 0px #4BC0C8;
+}
+
+em
+{
+    font-weight: bold;
+    font-style: italic;
+    color: #83a4d4;
+}
+
+[task]
+{
+    font-size: 125%;
+    font-style: italic;
+    margin: 0 auto;
+    padding-bottom: 0;
+}
+
+[formula]
+{
+    text-align: center;
+    font-size: 150%;
+}
+
+[user-input]
+{
+    text-align: center;
+}

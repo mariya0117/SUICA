@@ -1,0 +1,62 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Периметър, формули за периметър</title>
+    <script src="source/suica.min.js"></script>
+    <script src="source/project.js"></script>
+    <link rel="stylesheet" type="text/css" href="source/project.css">    
+</head>
+<body onload="main()">
+
+    <!-- title -->
+    <h1>Периметър, формули за периметър</h1>
+    <h4><em>Мария Димитрова, ф.н. 61818</em></h4>
+
+    <!-- introduction -->
+    <a id="1"><h2>Увод</h2></a>
+    <p><em>Периметър</em> е число, което е сума от дължините на страните на фигура. 
+        Стандартното означение за периметър в математиката е с буквата <em>P</em>.</p>
+
+    <!-- square -->
+    <a id="2"><h2>Периметър на квадрат</h2></a>
+    <p>Нека дължината на страната на квадрата е <em>a</em>.
+        Квадратът има 4 равни страни т.е.
+        <em>P = a + a + a + a</em> или:</p>
+    <p formula><em>P = 4 * а</em></p>
+
+    <!-- exercise 1 -->
+    <p task>Упражнение №1</p>
+    <p>Задайте стойност на страните на квадрата (цяло число от 1 до 7) и вижте как се променя той и как се променя периметъра му.</p>
+    <p user-input><em>a = </em><input type="text" id="a_size" value="2" onchange="onChangedSizeSquare(this.value)">&ensp;
+    <em>P = </em><input type="text" id="p_size" value="8"></p>
+
+    <canvas id="exercise-square" width="600" height="400">
+    </canvas>
+
+    <!-- rectangle -->
+    <a id="2"><h2>Периметър на правоъгълник</h2></a>
+    <p>Ако дължината на страните на правоъгълник са <em>a</em> и <em>b</em>.
+        Дължината на всичките му страни е <em>P = a + b + a + b</em> или:</p>
+    <p formula><em>P = 2 * a + 2 * b</em></p>
+    <img src="picture/rectangle.svg">
+
+    <!-- circle -->
+    <a id="2"><h2>Дължина на окръжност</h2></a>
+    <p>Ако диеметрът на окръжност е <em>d</em>, то радиусът му е <em> r = d/2</em>.
+        Дължина на окръжността, означена с <em>C</em>, е диаметърът умножен по <em>&pi; = 3,14159265359</em> или:</p>
+    <p formula><em>C = 2 * r * &pi;</em></p>
+    <img src="picture/circle.png" style="width 30%; height: 300px;">
+
+    <!-- tasks -->
+    <p task>Задача №1</p>
+    <p>На коя фигура периметъра е по-голям? На квадрат със страна 5 см. или на правоъгълник със страни 2 см. и 7 см?</p>
+    <input type="button" value="Решение" onclick="document.getElementById('solution1').style.display=''; this.style.display='none'">
+    <p id="solution1" style="display: none;">Периметъра на квадрата е 4*5 = 20 cm.<br>Периметъра на правоъгълника е 2*(2 + 7) = 2*9 = 18.<br>Значи периметъра на квадрата е по-голям.</p>
+
+    <p task>Задача №2</p>
+    <p>Ако едната страна на правоъгълник е 5 см и периметъра е 20 см, колко е дължината на другата му страна?</p>
+    <input type="button" value="Решение" onclick="document.getElementById('solution2').style.display=''; this.style.display='none'">
+    <p id="solution2" style="display: none;">Периметъра на правоъгълника е 2*(5 + a) = 10 + 2*a = 20<br>=> 2*a = 10<br>=> a = 5<br>=> Фигурата е квадрат.</p>
+</body>
+</html>
