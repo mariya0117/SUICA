@@ -34,24 +34,35 @@
     <canvas id="exercise-square" width="600" height="400">
     </canvas>
 
-    <div id="asquare-1" class="label">a</div>
-    <div id="square-a2" class="label">a</div>
-    <div id="square-a3" class="label">a</div>
-    <div id="square-a4" class="label">a</div>
-
     <!-- rectangle -->
     <a id="2"><h2>Периметър на правоъгълник</h2></a>
     <p>Ако дължината на страните на правоъгълник са <em>a</em> и <em>b</em>.
         Дължината на всичките му страни е <em>P = a + b + a + b</em> или:</p>
     <p formula><em>P = 2 * a + 2 * b</em></p>
-    <img src="picture/rectangle.svg">
+    
+    <!-- exercise 2 -->
+    <p task>Упражнение №2</p>
+    <p>Задайте стойности на страните на правоъгълника (две цели числа от 1 до 7) и вижте как се променя той и как се променя периметъра му.</p>
+    <p user-input><em>a = </em><input type="text" id="a_size" value="2" onchange="onChangedSizeRectangle(this.value)">&ensp;
+    <em><span id="rectangle-perimeter">P = 8</span></em></p>
+
+    <canvas id="exercise-rectangle" width="600" height="400">
+    </canvas>
 
     <!-- circle -->
     <a id="2"><h2>Дължина на окръжност</h2></a>
     <p>Ако диеметрът на окръжност е <em>d</em>, то радиусът му е <em> r = d/2</em>.
         Дължина на окръжността, означена с <em>C</em>, е диаметърът умножен по <em>&pi; = 3,14159265359</em> или:</p>
     <p formula><em>C = 2 * r * &pi;</em></p>
-    <img src="picture/circle.png" style="width 30%; height: 300px;">
+    
+    <!-- exercise 3 -->
+    <p task>Упражнение №3</p>
+    <p>Задайте стойност на радиуса на окръжността (цело число от 1 до 5) и вижте как се променя тя и как се променя периметъра й.</p>
+    <p user-input><em>a = </em><input type="text" id="r_size" value="2" onchange="onChangedSizeCircle(this.value)">&ensp;
+    <em><span id="circle-perimeter">P = 4 * &pi;</span></em></p>
+
+    <canvas id="exercise-circle" width="600" height="400">
+    </canvas>
 
     <!-- tasks -->
     <p task>Задача №1</p>
