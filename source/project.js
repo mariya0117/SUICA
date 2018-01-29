@@ -1,6 +1,6 @@
 function main() {
     // square
-    p = new Suica("exercise-square");
+    p1 = new Suica("exercise-square");
     background([218 / 255, 226 / 255, 248 / 255, 1]);
     orthographic(-10000, 10000);
     lookAt([0, 0, 100], [0, 0, 0], [0, 1, 0]);
@@ -10,7 +10,7 @@ function main() {
     sqr.color = [0,0,0];
 
     // rectangle
-    p = new Suica("exercise-rectangle");
+    p2 = new Suica("exercise-rectangle");
     background([218 / 255, 226 / 255, 248 / 255, 1]);
     orthographic(-10000, 10000);
     lookAt([0, 0, 100], [0, 0, 0], [0, 1, 0]);
@@ -20,7 +20,7 @@ function main() {
     sqr.color = [0,0,0];
 
     // circle
-    p = new Suica("exercise-circle");
+    p3 = new Suica("exercise-circle");
     background([218 / 255, 226 / 255, 248 / 255, 1]);
     orthographic(-10000, 10000);
     lookAt([0, 0, 100], [0, 0, 0], [0, 1, 0]);
@@ -49,20 +49,29 @@ function onChangedSizeSquare(value) {
     sqr.color = [0,0,0];
 }
 
-function onChangedSizeRectangle(value) {
-    if (value > 7 || value % 1 !== 0) {
+function onChangedSizeRectangle() {
+    valueA = document.getElementById("a2_size").value;
+    valueB = document.getElementById("b_size").value;
+
+    if (valueA > 7 || valueA % 1 !== 0) {
         alert("Стойността на а трябва да е цяло число между 1 до 7!"); // otherwise is bigger than the canvas 'exercise-regtangle'
         return;
     }
-    
-    document.getElementById("rectangle-perimeter").innerHTML="P = " + value * 4;
 
+    if (valueB > 7 || valueB % 1 !== 0) {
+        alert("Стойността на b трябва да е цяло число между 1 до 7!"); // otherwise is bigger than the canvas 'exercise-regtangle'
+        return;
+    }
+    
+    document.getElementById("rectangle-perimeter").innerHTML="P = " + (valueA * 2 + valueB * 2) ;
+
+    // set new rectangle values
     p = new Suica("exercise-rectangle");
     background([218 / 255, 226 / 255, 248 / 255, 1]);
     orthographic(-10000, 10000);
     lookAt([0, 0, 100], [0, 0, 0], [0, 1, 0]);
 
-    sqr = rectangle([0,0,0], [3 * 40, 2 * 40]); // default rectangle
+    sqr = rectangle([0,0,0], [valueB * 40, valueA * 40]);
     sqr.mode = Suica.LINE;  
     sqr.color = [0,0,0];
 }
