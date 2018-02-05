@@ -74,8 +74,13 @@
 
     <!-- tasks -->
     <p task>Задача №1</p>
-    <p>На коя фигура периметъра е по-голям? На квадрат със страна 5 см. или на правоъгълник със страни 2 см. и 7 см?</p>
-    <input type="button" value="Решение" onclick="document.getElementById('solution1').style.display=''; this.style.display='none'">
+    <p>На коя фигура периметъра е по-голям? На квадрат със страна 5 см. или на правоъгълник със страни 2 см. и 7 см.?</p>
+    <p>За помощ използвайте начартаните квадрат със страна 5 см. и на правоъгълник със страни 2 см. и 7 см., като плъзнете десния край на провоъгълника.</p>
+
+    <canvas id="exercise" width="600" height="400">
+    </canvas>
+
+    <br><input type="button" value="Решение" onclick="document.getElementById('solution1').style.display=''; this.style.display='none'">
     <p id="solution1" style="display: none;">Периметъра на квадрата е 4*5 = 20 cm.<br>Периметъра на правоъгълника е 2*(2 + 7) = 2*9 = 18.<br>Значи периметъра на квадрата е по-голям.</p>
 
     <p task>Задача №2</p>
